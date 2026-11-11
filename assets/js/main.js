@@ -39,4 +39,12 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .finally(function () { btn.disabled = false; btn.textContent = 'Send'; });
   });
+
+  // "Give by transfer" opens the account panel as well as scrolling to it
+  document.querySelectorAll('[data-reveal]').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      var panel = document.getElementById(trigger.getAttribute('data-reveal'));
+      if (panel) { panel.open = true; }
+    });
+  });
 });
