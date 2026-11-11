@@ -4,98 +4,79 @@ Static site. No build step, no dependencies. Five pages, hosted on GitHub Pages.
 
 ```
 index.html          Home
-what-we-do.html     The two programmes
-our-story.html      2022–2026, and what each year taught us
-support.html        Giving / donations
-contact.html        Contact form (Web3Forms)
+about.html          Mission, vision, L.I.F.E., the 2022-2026 story, the logo
+our-work.html       Mentorship, the Students' Parliament, the conferences
+impact.html         The launch in numbers, what we measure, SDG alignment
+support.html        Giving, other ways to help, enquiry form
+404.html            Not-found page (root-absolute paths, noindex)
 assets/css/style.css
-assets/js/main.js
+assets/js/main.js   Mobile nav + Web3Forms AJAX
 assets/img/         logo.png + photographs
-CNAME               custom domain
-.nojekyll           stops GitHub re-processing the files
+CNAME               live4lifecrew.org
+robots.txt  sitemap.xml  .nojekyll
 ```
 
-## Still to fill in
-
-Search the project for square brackets — every one is a placeholder.
-
-| Where | Placeholder | What to put |
-|---|---|---|
-| `support.html` | `[BANK NAME]`, `[ACCOUNT NUMBER]` | The Foundation's account details |
-| `support.html` | `[PAYMENT LINK]` | Paystack or Flutterwave payment page URL |
-| `CNAME` | `live4lifecrew.org` | Confirm this is the domain you own |
+Type is Nunito, loaded from Google Fonts. Palette: blue `#434DFE`, green `#28A745`,
+yellow `#FBC02D`, orange `#FF6F00`, all defined as custom properties at the top of
+the stylesheet.
 
 ## The contact form
 
-Runs on **Web3Forms** — no server, no backend, free tier 250 submissions a month.
+Runs on **Web3Forms** - no server, no backend, free tier 250 submissions a month.
+The form lives at the bottom of `support.html`.
 
 - Form name: **Live4Life Website Contact**
-- Access key: `2e0b2abc-4dd5-4f66-995a-c788ad354386` (public by design — safe in client code)
+- Access key: `2e0b2abc-4dd5-4f66-995a-c788ad354386` (public by design - safe in client code)
+- Submissions go to `crew@live4lifecrew.org`
 - Dashboard: https://app.web3forms.com/forms
 
-The form posts over AJAX, so the visitor stays on the page and sees a thank-you line.
-If the request fails they are told to email `crew@live4lifecrew.org` instead.
-A hidden `botcheck` field catches the simplest spam bots; Web3Forms' own spam filter
-is switched on behind it.
-
-**Recipient:** submissions currently arrive at the Web3Forms account address.
-To move them to `crew@live4lifecrew.org`, click the verification link sent to that
-inbox, then Settings → Email Configuration → Recipient Emails on the form.
+It posts over AJAX, so the visitor stays on the page and sees a thank-you line. If the
+request fails they are told to email instead. A hidden `botcheck` field catches simple
+bots; Web3Forms' own spam filter sits behind it.
 
 ## Photographs
 
-All from the first sitting on 7 November 2026 and the Nation Building Conferences.
+From the first sitting of the Students' Parliament on 7 November 2026 and from the
+Nation Building Conferences.
 
 | File | What it is | Used on |
 |---|---|---|
-| `house-wide.jpg` | The House mid-session, wide | Home |
-| `house-session.jpg` | The House in session | What we do |
-| `first-sitting.jpg` | Opening day, order of the day on the board | Our story |
-| `nb-conference.jpeg` | A Nation Building Conference hall | What we do |
-| `nb-bauchi.jpeg` | Speaking at the Bauchi conference | Our story |
-| `arrival.jpg` | Delegates arriving | Support |
-| `og.jpg` | 1200×630 social sharing card | all pages |
+| `house-wide.jpg` | The House mid-session, wide | Home hero, 404 |
+| `house-session.jpg` | The House in session | Our work |
+| `first-sitting.jpg` | Opening day, order of the day on the board | Home |
+| `nb-conference.jpeg` | A Nation Building Conference hall | Our work |
+| `nb-bauchi.jpeg` | Speaking at the Bauchi conference | About |
+| `arrival.jpg` | Delegates arriving | Impact |
+| `og.jpg` | 1200x630 social sharing card | all pages |
 
 `assets/img/_raw/` holds unused originals and is gitignored.
 
 **Only publish photographs where a parent ticked the photograph box on the consent form.**
 Prefer wide shots, the room, and backs of heads over close-ups of children's faces.
-Resize to about 1800px wide and compress before committing — large photographs are the
+Resize to about 1800px wide and compress before committing - large photographs are the
 usual reason a site is slow on a Nigerian mobile connection.
 
-## Publishing to GitHub Pages
+## DNS
 
-```bash
-cd live4life-website
-git init
-git add .
-git commit -m "Live4Life website"
-git branch -M main
-git remote add origin https://github.com/USERNAME/REPO.git
-git push -u origin main
-```
+The custom domain is set in `CNAME`. At the registrar (Namecheap):
 
-Then on GitHub: **Settings → Pages → Source: Deploy from a branch → main / (root)**.
+- `A` records for `@` to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- `CNAME` for `www` to `nerdy-zillennial.github.io`
 
-For the custom domain, at your registrar create:
+Leave the MX records alone - they carry `crew@live4lifecrew.org`.
 
-- `A` records for `@` pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-- a `CNAME` record for `www` pointing to `USERNAME.github.io`
+Then in Settings - Pages, tick **Enforce HTTPS** once the certificate has been issued.
 
-Then in Settings → Pages, enter the domain and tick **Enforce HTTPS** once the
-certificate has been issued (this can take up to an hour).
+## Editing
+
+The header and footer are repeated in each page. If you change a nav link, an email
+address or a phone number, change it everywhere. For a site this size that is simpler
+than adding a build tool.
 
 ## Checking it locally
 
 ```bash
-cd live4life-website
 python3 -m http.server 8080
 ```
 
 Then open http://localhost:8080
-
-## Editing
-
-The header and footer are repeated in each of the five files. If you change a nav link,
-an email address or a phone number, change it in all five. For a site this size that is
-simpler than adding a build tool.
