@@ -203,6 +203,109 @@ form.l4l{display:flex; flex-direction:column; gap:15px; max-width:560px}
 .sdgchip .code{font-weight:900; font-size:0.96rem; color:var(--blue)}
 .sdgchip .desc{font-size:0.88rem; color:var(--muted)}
 
+/* ---------- donate page (support.html) ---------- */
+.donate-wrap{
+  background:#1d2230 url("../img/house-wide.jpg") center 30%/cover no-repeat;
+  position:relative; padding:56px 22px 72px;
+}
+.donate-wrap::before{content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(20,24,40,.55),rgba(20,24,40,.35) 40%,rgba(20,24,40,.6))}
+.donate-grid{
+  position:relative; max-width:1120px; margin:0 auto; display:grid; gap:0;
+  grid-template-columns:1fr; grid-template-areas:"intro" "card" "body";
+}
+@media(min-width:960px){
+  .donate-grid{grid-template-columns:minmax(0,1fr) 420px; grid-template-areas:"intro card" "body card"}
+}
+.dstory{background:#fff; padding:44px 64px; display:flex; flex-direction:column; gap:18px}
+.dstory p{max-width:none}
+.dstory-intro{grid-area:intro; padding-top:56px; text-align:left}
+.dstory-body{grid-area:body; padding-bottom:56px}
+.dstory h1{font-size:clamp(1.9rem,3.6vw,2.6rem); text-align:center}
+.dstory h2{font-size:clamp(1.3rem,2.4vw,1.6rem)}
+.dstory h3{font-size:1.2rem; margin-top:10px}
+.dcenter{text-align:center}
+.dlogo{display:block; height:56px; width:auto; margin:0 auto}
+.drule{border:0; border-top:1px solid var(--rule); width:200px; margin:6px auto}
+.dsign{font-size:.95rem; color:var(--muted); border-top:1px solid var(--rule); padding-top:18px}
+@media(max-width:959px){
+  .dstory-intro{border-radius:14px 14px 0 0}
+  .dstory-body{border-radius:0 0 14px 14px}
+}
+@media(min-width:960px){
+  .dstory-intro{border-radius:4px 0 0 0}
+  .dstory-body{border-radius:0 0 4px 4px}
+}
+@media(max-width:620px){
+  .donate-wrap{padding:28px 12px 44px}
+  .dstory{padding:30px 22px}
+}
+
+.dcard{grid-area:card; background:#fff; position:relative; z-index:2; box-shadow:0 18px 50px rgba(0,0,0,.28); padding:32px 32px 30px}
+@media(min-width:960px){
+  .dcard{align-self:start; position:sticky; top:84px; margin:36px 0 0 -30px; border-radius:4px}
+}
+@media(max-width:959px){
+  .dcard{border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); box-shadow:none}
+}
+@media(max-width:620px){ .dcard{padding:26px 22px} }
+.dform{display:flex; flex-direction:column; gap:22px}
+.dform[hidden]{display:none}
+.dsec{display:flex; flex-direction:column; gap:12px}
+.dcard h2{font-size:1.15rem; letter-spacing:-0.01em}
+.dcard h3{font-size:1.02rem}
+.dnote{font-size:.9rem; color:var(--muted); line-height:1.45}
+.dhead{display:flex; justify-content:space-between; align-items:baseline; gap:10px; flex-wrap:wrap}
+.linkbtn{background:none; border:0; padding:0; font:inherit; font-size:.92rem; font-weight:800; color:var(--ink); text-decoration:underline; text-underline-offset:3px; cursor:pointer}
+.linkbtn:hover{color:var(--orange)}
+.seg{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.segbtn,.amt{
+  font:inherit; font-weight:800; font-size:.95rem; color:var(--ink); background:#fff;
+  border:1.5px solid var(--ink); border-radius:3px; padding:11px 8px; cursor:pointer;
+  transition:background .12s ease, color .12s ease, border-color .12s ease;
+}
+.segbtn:hover,.amt:hover{background:var(--orange-wash)}
+.segbtn.on,.amt.on{background:var(--orange); border-color:var(--orange); color:#fff; box-shadow:0 4px 12px rgba(255,111,0,.3)}
+.amts{display:grid; grid-template-columns:repeat(4,1fr); gap:8px}
+.amt{font-size:.86rem; padding:11px 2px; font-variant-numeric:tabular-nums}
+@media(max-width:380px){ .amts{grid-template-columns:repeat(2,1fr)} }
+.other{position:relative}
+.other[hidden]{display:none}
+.other .cur{position:absolute; left:13px; top:50%; transform:translateY(-50%); font-weight:800; color:var(--muted)}
+.dcard input[type=text],.dcard input[type=email],.dcard input[type=tel],.dcard input[type=number]{
+  font:inherit; font-size:.95rem; color:var(--ink); background:#fff; width:100%; min-width:0;
+  border:1.5px solid var(--ink); border-radius:3px; padding:10px 12px;
+}
+.other input{padding-left:30px!important}
+.dcard input::placeholder{color:#9aa09c; font-weight:600}
+.dcard input:focus{outline:2px solid var(--orange); outline-offset:1px}
+.dcard input.bad{border-color:#C0392B; background:#FDF1EF}
+.dfields{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+@media(max-width:380px){ .dfields{grid-template-columns:1fr} }
+#org-wrap[hidden]{display:none}
+.radio{display:flex; gap:11px; align-items:flex-start; font-size:.93rem; line-height:1.4; cursor:pointer}
+.radio input{appearance:none; -webkit-appearance:none; flex:none; width:20px; height:20px; margin:0; border:2px solid var(--ink); border-radius:50%; background:#fff; cursor:pointer; display:grid; place-content:center}
+.radio input::before{content:""; width:10px; height:10px; border-radius:50%; background:var(--orange); transform:scale(0); transition:transform .12s ease}
+.radio input:checked::before{transform:scale(1)}
+.radio input:focus-visible{outline:2px solid var(--orange); outline-offset:2px}
+.radio.check input{border-radius:4px}
+.radio.check input::before{border-radius:2px}
+.radio.bad input{border-color:#C0392B}
+.radio.disabled{color:var(--faint); cursor:not-allowed}
+.radio.disabled input{border-color:var(--rule); cursor:not-allowed}
+.soon{font-style:normal; font-size:.68rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; background:var(--yellow-wash); color:#8A6200; padding:3px 8px; border-radius:999px; margin-left:6px; vertical-align:1px}
+.dcard .drule{width:70%; margin:0 auto}
+.dsmall{font-size:.82rem; color:var(--muted); line-height:1.45}
+.derr{font-size:.88rem; font-weight:800; color:#C0392B; min-height:0}
+.derr:empty{display:none}
+.dgo{width:100%; font-size:1.02rem; padding:16px; border-radius:3px}
+.dgo:hover{background:#E86300}
+.dgo[disabled]{opacity:.7; cursor:wait}
+.sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+.dthanks{display:flex; flex-direction:column; gap:14px}
+.dthanks[hidden]{display:none}
+.dthanks:focus{outline:none}
+.dthanks .bank{max-width:none}
+
 /* ---------- footer ---------- */
 footer.site{background:var(--paper); border-top:1px solid var(--rule); padding:56px 22px 32px}
 .fgrid{display:grid; gap:30px}
