@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Support us &mdash; Live4Life Impact Crew Empowerment Foundation</title>
-<meta name="description" content="Everything since 2023 we have funded ourselves. Give by transfer, open a school to a Students' Parliament, or host a conference.">
+<meta name="description" content="Everything since 2023 we have funded ourselves. Give once or monthly, open a school to a Students' Parliament, or host a conference.">
 <meta property="og:title" content="Support us &mdash; Live4Life Impact Crew Empowerment Foundation">
-<meta property="og:description" content="Everything since 2023 we have funded ourselves. Give by transfer, open a school to a Students' Parliament, or host a conference.">
+<meta property="og:description" content="Everything since 2023 we have funded ourselves. Give once or monthly, open a school to a Students' Parliament, or host a conference.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://live4lifecrew.org/assets/img/og.jpg">
 <meta property="og:url" content="https://live4lifecrew.org/support.html">
@@ -35,74 +35,151 @@
       <a href="about.html">About</a>
       <a href="our-work.html">Our Work</a>
       <a href="support.html" aria-current="page">Support Us</a>
-      <a class="navcta" href="support.html">Donate</a>
+      <a class="navcta" href="#give">Donate</a>
     </div>
-    <a class="navcta" href="support.html">Donate</a>
+    <a class="navcta" href="#give">Donate</a>
   </div>
 </nav>
 <main id="main">
 
-<div class="pagehead">
-  <div class="inner narrow">
-    <p class="eyebrow">Support us</p>
-    <h1 style="font-size:clamp(2rem,5vw,3rem)">Back the years nobody sees</h1>
-    <p class="lead">Every naira you give goes into the slow part: mentors in the field, groups that keep meeting, and the next school that gets a House of its own.</p>
-    <div class="btnrow" style="margin-top:6px">
-      <a class="btn solid" href="#give" data-reveal="bank-reveal">Give by transfer</a>
-      <a class="btn line" href="#partner">Other ways to help</a>
-    </div>
-  </div>
-</div>
+<div class="donate-wrap">
+  <div class="donate-grid">
 
-<div class="band paper" id="give">
-  <div class="inner">
-    <div class="grid2" style="gap:40px; align-items:start">
-      <div style="display:flex; flex-direction:column; gap:18px">
-        <div>
-          <p class="eyebrow">Give by transfer</p>
-          <h2 style="margin-top:8px; font-size:1.65rem">Bank details</h2>
-        </div>
-        <details class="reveal" id="bank-reveal">
-          <summary>
-            <span>Show account details</span>
-            <svg viewBox="0 0 20 20" aria-hidden="true" width="18" height="18"><path d="M5 7.5 10 12.5 15 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </summary>
-          <div class="bank">
-            <span class="l">Account name</span><span class="d">Live4Life Impact Crew Empowerment Foundation</span>
-            <span class="l">Bank</span><span class="d">Stanbic IBTC</span>
-            <span class="l">Account number</span><span class="d acct">0084041563</span>
+    <!-- Story, top half -->
+    <article class="dstory dstory-intro">
+      <img class="dlogo" src="assets/img/logo-colour.png" alt="Live4Life Impact Crew Empowerment Foundation" width="240" height="64">
+      <hr class="drule">
+      <h1>Back the years nobody sees</h1>
+      <p>Every naira you give goes into the slow part: mentors in the field, groups that keep meeting, and the next school that gets a House of its own.</p>
+      <p>Everything we have done since 2023 we have <b>funded ourselves</b>. Your gift lets us keep going, and reach young people we could not reach on our own.</p>
+    </article>
+
+    <!-- Donation card -->
+    <aside class="dcard" id="give" aria-labelledby="give-h">
+      <form id="donate-form" class="dform" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="2e0b2abc-4dd5-4f66-995a-c788ad354386">
+        <input type="hidden" name="subject" value="New donation pledge from the Live4Life website">
+        <input type="hidden" name="from_name" value="Live4Life website">
+        <input type="hidden" name="frequency" value="Monthly">
+        <input type="hidden" name="amount" value="10000">
+
+        <div class="dsec">
+          <h2 id="give-h">I want to give</h2>
+          <p class="dnote">A monthly gift helps us plan ahead: mentors, venues and transport are booked months in advance.</p>
+          <div class="seg" role="radiogroup" aria-label="How often">
+            <button type="button" class="segbtn" role="radio" aria-checked="false" data-freq="One-time">One-time</button>
+            <button type="button" class="segbtn on" role="radio" aria-checked="true" data-freq="Monthly">Monthly</button>
           </div>
-        </details>
-        <p class="hint">Tell us at <a href="mailto:crew@live4lifecrew.org">crew@live4lifecrew.org</a> when you have given, so we can thank you and account for it. Giving from outside Nigeria, or want to set up something regular? Write to us and we will arrange it.</p>
-        <figure class="fig fig-crop" style="margin-top:8px">
-          <img src="assets/img/d-notes.jpg" alt="A young person taking notes during a session." width="1100" height="733" loading="lazy">
-          <figcaption>Transport, a hall, and the printed order of the day. This is what giving pays for.</figcaption>
-        </figure>
-      </div>
-
-      <div style="display:flex; flex-direction:column; gap:18px" id="partner">
-        <div>
-          <p class="eyebrow g">Other ways to help</p>
-          <h2 style="margin-top:8px; font-size:1.65rem">Not everything useful is money</h2>
         </div>
-        <ul class="ticks">
-          <li><b>Open a school to us.</b> If you lead or govern a secondary school in Plateau and want a House of your own, write to us. The design is finished and ready to hand over.</li>
-          <li><b>Host a conference.</b> If you are a tertiary institution, student body or faculty, invite us onto your campus and we will come to you.</li>
-          <li><b>Give a venue or a service.</b> Space, printing, transport, catering and photography all cost us real money we would rather spend on young people.</li>
-          <li><b>Lend us what you know.</b> We need people who understand governance, finance and safeguarding more than we need another supporter in name.</li>
-          <li><b>Open a door.</b> An internship, an apprenticeship or a first job for a young person who is ready is worth more than most donations.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="band paper">
-  <div class="inner">
-    <figure class="fig fig-band">
-      <img src="assets/img/nb-bauchi-band.jpg" alt="A speaker at the lectern during the Nation Building Conference in Bauchi." width="1280" height="549" loading="lazy">
-      <figcaption>A Nation Building Conference in Bauchi. Days like this one are what giving pays for.</figcaption>
-    </figure>
+        <div class="dsec">
+          <div class="dhead">
+            <h3>Amount</h3>
+            <button type="button" class="linkbtn" id="other-toggle" aria-expanded="false" aria-controls="other-wrap">Give another amount</button>
+          </div>
+          <div class="amts" role="radiogroup" aria-label="Amount">
+            <button type="button" class="amt" role="radio" aria-checked="false" data-amt="50000">&#8358;50,000</button>
+            <button type="button" class="amt" role="radio" aria-checked="false" data-amt="20000">&#8358;20,000</button>
+            <button type="button" class="amt on" role="radio" aria-checked="true" data-amt="10000">&#8358;10,000</button>
+            <button type="button" class="amt" role="radio" aria-checked="false" data-amt="5000">&#8358;5,000</button>
+          </div>
+          <div class="other" id="other-wrap" hidden>
+            <label for="other-amt" class="sr">Other amount in naira</label>
+            <span class="cur" aria-hidden="true">&#8358;</span>
+            <input id="other-amt" type="number" inputmode="numeric" min="500" step="100" placeholder="Other amount">
+          </div>
+        </div>
+
+        <div class="dsec">
+          <h3>Your details</h3>
+          <div class="dfields">
+            <label class="sr" for="d-first">First name</label>
+            <input id="d-first" name="first_name" type="text" placeholder="First name *" required autocomplete="given-name">
+            <label class="sr" for="d-last">Last name</label>
+            <input id="d-last" name="last_name" type="text" placeholder="Last name *" required autocomplete="family-name">
+            <label class="sr" for="d-email">Email</label>
+            <input id="d-email" name="email" type="email" placeholder="Email *" required autocomplete="email">
+            <label class="sr" for="d-phone">Phone</label>
+            <input id="d-phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel">
+          </div>
+          <label class="radio check"><input type="checkbox" id="d-isorg"><span>I am giving on behalf of an organisation</span></label>
+          <div id="org-wrap" hidden>
+            <label class="sr" for="d-org">Organisation name</label>
+            <input id="d-org" name="organisation" type="text" placeholder="Organisation name" autocomplete="organization" class="full">
+          </div>
+        </div>
+
+        <div class="dsec">
+          <h3>Payment method</h3>
+          <label class="radio disabled"><input type="radio" name="method" value="Card" disabled><span>Card payment <em class="soon">Coming soon</em></span></label>
+          <label class="radio"><input type="radio" name="method" value="Bank transfer" checked><span>Bank transfer</span></label>
+        </div>
+
+        <hr class="drule">
+
+        <label class="radio check"><input type="checkbox" id="d-consent" required><span>I agree that Live4Life may use my details to record and acknowledge my gift. They are never shared or sold.</span></label>
+        <p class="dsmall">A donation is a gift with nothing given in return.</p>
+
+        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="derr" id="donate-err" role="alert"></p>
+        <button class="btn solid dgo" type="submit" id="donate-btn">Give &#8358;10,000 monthly</button>
+      </form>
+
+      <!-- Shown after Give is pressed -->
+      <div class="dthanks" id="donate-thanks" hidden tabindex="-1">
+        <h2>Thank you<span id="t-name"></span></h2>
+        <p id="t-line"></p>
+        <div class="bank">
+          <span class="l">Account name</span><span class="d">Live4Life Impact Crew Empowerment Foundation</span>
+          <span class="l">Bank</span><span class="d">Stanbic IBTC</span>
+          <span class="l">Account number</span><span class="d acct">0084041563</span>
+          <span class="l">Amount</span><span class="d" id="t-amt"></span>
+          <span class="l">Reference</span><span class="d" id="t-ref"></span>
+        </div>
+        <p class="dsmall" id="t-monthly" hidden>For a monthly gift, set up a standing order with your bank using the details above.</p>
+        <p class="dsmall">Giving from outside Nigeria? Write to <a href="mailto:crew@live4lifecrew.org">crew@live4lifecrew.org</a> and we will arrange it.</p>
+        <button type="button" class="linkbtn" id="donate-again">Make another gift</button>
+      </div>
+    </aside>
+
+    <!-- Story, rest -->
+    <article class="dstory dstory-body">
+      <h2 class="dcenter">Live4Life is here for young people. Be there for them too.</h2>
+      <figure class="fig fig-crop">
+        <img src="assets/img/d-notes.jpg" alt="A young person taking notes during a session." width="1100" height="733" loading="lazy">
+        <figcaption>Transport, a hall, and the printed order of the day. This is what giving pays for.</figcaption>
+      </figure>
+
+      <p><b>With your support we can:</b></p>
+      <ul class="ticks">
+        <li>keep mentors in the field, meeting young people week after week</li>
+        <li>keep student groups meeting long after the first session</li>
+        <li>give the next school a Students&rsquo; Parliament, a House of its own</li>
+        <li>bring Nation Building Conferences to more campuses</li>
+        <li>cover the transport, halls and printing that every session needs</li>
+      </ul>
+
+      <h3>Why give monthly?</h3>
+      <p>The work that changes young people is slow, and it only works if it keeps going. A regular gift is the most valuable thing you can give us, because it lets us plan the year ahead instead of the next week.</p>
+
+      <h3>Not everything useful is money</h3>
+      <ul class="ticks">
+        <li><b>Open a school to us.</b> If you lead or govern a secondary school in Plateau and want a House of your own, write to us. The design is finished and ready to hand over.</li>
+        <li><b>Host a conference.</b> If you are a tertiary institution, student body or faculty, invite us onto your campus and we will come to you.</li>
+        <li><b>Give a venue or a service.</b> Space, printing, transport, catering and photography all cost us real money we would rather spend on young people.</li>
+        <li><b>Lend us what you know.</b> We need people who understand governance, finance and safeguarding more than we need another supporter in name.</li>
+        <li><b>Open a door.</b> An internship, an apprenticeship or a first job for a young person who is ready is worth more than most donations.</li>
+      </ul>
+
+      <p><b>Join us. Thank you.</b></p>
+
+      <div class="dsign">
+        <b>Live4Life Impact Crew Empowerment Foundation</b><br>
+        Bwak Rantya, Jos, Plateau State, Nigeria<br>
+        <a href="mailto:crew@live4lifecrew.org">crew@live4lifecrew.org</a> &middot; <a href="tel:+2347046221411">+234 704 622 1411</a>
+      </div>
+    </article>
+
   </div>
 </div>
 
@@ -113,41 +190,30 @@
       <h2 style="margin-top:8px">Partnership and donation enquiries</h2>
       <p class="muted" style="margin-top:10px">Tell us what you have in mind and we will come back to you within a week.</p>
     </div>
-    <div class="grid2" style="gap:40px; align-items:start">
-      <form class="l4l" data-ajax action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="2e0b2abc-4dd5-4f66-995a-c788ad354386">
-        <input type="hidden" name="subject" value="New enquiry from the Live4Life website">
-        <input type="hidden" name="from_name" value="Live4Life website">
-        <div class="field"><label for="p-name">Your name</label><input id="p-name" name="name" type="text" required autocomplete="name"></div>
-        <div class="field"><label for="p-org">Organisation, if any</label><input id="p-org" name="organisation" type="text" autocomplete="organization"></div>
-        <div class="field"><label for="p-email">Email</label><input id="p-email" name="email" type="email" required autocomplete="email"></div>
-        <div class="field"><label for="p-type">I would like to</label>
-          <select id="p-type" name="interest">
-            <option>Make a donation</option>
-            <option>Fund a cohort or a conference</option>
-            <option>Open a school to a Students&rsquo; Parliament</option>
-            <option>Host a conference at our institution</option>
-            <option>Offer a venue, service or in-kind support</option>
-            <option>Offer work experience to a young person</option>
-            <option>Something else</option>
-          </select>
-        </div>
-        <div class="field"><label for="p-msg">Message</label><textarea id="p-msg" name="message" required></textarea></div>
-        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn blue" type="submit" style="align-self:flex-start">Send</button>
-        <p id="form-status" role="status" aria-live="polite" style="margin-top:2px; font-weight:700"></p>
-        <p class="hint">Your details are used only to reply to you, and are never shared or sold.</p>
-      </form>
-
-      <div style="display:flex; flex-direction:column; gap:18px">
-        <div class="card">
-          <h3>Reach us directly</h3>
-          <p><strong style="color:var(--ink)">Email</strong><br><a href="mailto:crew@live4lifecrew.org">crew@live4lifecrew.org</a></p>
-          <p><strong style="color:var(--ink)">Telephone</strong><br><a href="tel:+2347046221411">+234 704 622 1411</a></p>
-          <p><strong style="color:var(--ink)">Address</strong><br>Bwak Rantya, Jos<br>Plateau State, Nigeria</p>
-        </div>
+    <form class="l4l" data-ajax action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="2e0b2abc-4dd5-4f66-995a-c788ad354386">
+      <input type="hidden" name="subject" value="New enquiry from the Live4Life website">
+      <input type="hidden" name="from_name" value="Live4Life website">
+      <div class="field"><label for="p-name">Your name</label><input id="p-name" name="name" type="text" required autocomplete="name"></div>
+      <div class="field"><label for="p-org">Organisation, if any</label><input id="p-org" name="organisation" type="text" autocomplete="organization"></div>
+      <div class="field"><label for="p-email">Email</label><input id="p-email" name="email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="p-type">I would like to</label>
+        <select id="p-type" name="interest">
+          <option>Make a donation</option>
+          <option>Fund a cohort or a conference</option>
+          <option>Open a school to a Students&rsquo; Parliament</option>
+          <option>Host a conference at our institution</option>
+          <option>Offer a venue, service or in-kind support</option>
+          <option>Offer work experience to a young person</option>
+          <option>Something else</option>
+        </select>
       </div>
-    </div>
+      <div class="field"><label for="p-msg">Message</label><textarea id="p-msg" name="message" required></textarea></div>
+      <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn blue" type="submit" style="align-self:flex-start">Send</button>
+      <p id="form-status" role="status" aria-live="polite" style="margin-top:2px; font-weight:700"></p>
+      <p class="hint">Your details are used only to reply to you, and are never shared or sold.</p>
+    </form>
   </div>
 </div>
 </main>
@@ -182,5 +248,6 @@
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/donate.js"></script>
 </body>
 </html>
